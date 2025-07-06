@@ -7,6 +7,7 @@ import Inicio from "./Pages/Inicio";
 import SobreMim from './Pages/SobreMim';
 import Techs from './Pages/Techs';
 import Projetos from './Pages/Projetos';
+import { Contato } from './Pages/Contato';
 
 
 const Pagina = styled.div`
@@ -30,6 +31,7 @@ function App() {
             <Route path="/sobre" element={<SobreMim />} />
             <Route path="/techs" element={<Techs />} />
             <Route path="/projetos" element={<Projetos />} />
+            <Route path="/Contato" element={<Contato />} />
           </Routes>
         </Conteudo>
         <Footer />

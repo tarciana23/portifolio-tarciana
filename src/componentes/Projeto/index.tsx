@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa";
 const SectionProjeto = styled.div`
   width: 17rem;
   height: 15rem;
+  text-align: justify;
   background-color: var(--box-content);
   color: var(--light-content);
   padding: 2rem;
@@ -36,7 +37,7 @@ const SectionProjeto = styled.div`
 
   p:last-child {
     font-weight: bold;
-    color: var(--solid-heading); // ou a cor que preferir para destacar techs
+    color: var(--solid-heading);
   }
 
   @media (max-width: 768px) {

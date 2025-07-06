@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Subtitulo from "../../componentes/Subtitulo";
 import TituloSecao from "../../componentes/TituloSecao";
 
 const SecaoTechs = styled.section`
@@ -49,7 +48,6 @@ export default function Techs() {
   return (
     <SecaoTechs>
       <TituloSecao titulo="Minhas Techs" />
-      <Subtitulo titulo="Tecnologias utilizadas recentemente" />
       <div className="grid-techs">
         <svg viewBox="0 0 128 128">
           <path

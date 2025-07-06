@@ -67,7 +67,7 @@ export default function Header() {
           <Link to="/projetos">Projetos</Link>
         </li>
         <li>
-          <a href="#">Contato</a>
+          <Link to="/contato">Contato</Link>
         </li>
       </ListaEstilizada>
       <ListaEstilizada>
@@ -77,12 +77,12 @@ export default function Header() {
           </a>
         </li>
         <li>
-          <a href="mailto:tarcianasoliveira23@gmail.com">
+          <a href="mailto:tarcianasoliveira23@gmail.com" target="_blank">
             <MdEmail />
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/tarciana-souza-oliveira-72127021a/">
+          <a href="https://www.linkedin.com/in/tarciana-souza-oliveira-72127021a/" target="_blank">
             <FaLinkedin />
           </a>
         </li>
