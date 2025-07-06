@@ -6,6 +6,13 @@ const SecaoEstilizada = styled.section`
   align-items: center;
   justify-content: space-around;
   padding: 1em 2em;
+
+   @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
 `;
 
 const ApresentacaoEstilizada = styled.div`
@@ -13,6 +20,8 @@ const ApresentacaoEstilizada = styled.div`
     font-weight: 700;
     font-size: 3em;
     color: var(--font-color-primary);
+    word-break: break-word;
+    overflow-wrap: anywhere;
   }
 `;
 
@@ -33,6 +42,11 @@ const FotoEstilizada = styled.div`
     display: block;
     background: white; 
   }
+
+   @media (max-width: 768px) {
+   display: none;
+  }
+
 `;
 
 export default function Inicio() {

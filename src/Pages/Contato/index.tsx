@@ -20,7 +20,17 @@ const SecaoSobre = styled.section`
   p:last-child {
     font-style: italic;
     color: var(--solid-heading);
+    word-break: break-word;
+    overflow-wrap: anywhere;
   }
+
+   @media (max-width: 768px) {
+    font-size: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
 `;
 
 export function Contato() {

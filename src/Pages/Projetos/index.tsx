@@ -17,6 +17,8 @@ const SecaoTechs = styled.section`
   }
 
   @media (max-width: 768px) {
+    max-width: 100%; 
+    padding: 2em 1em;
     .grid-techs {
       grid-template-columns: repeat(2, 1fr);
     }

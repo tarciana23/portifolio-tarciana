@@ -1,18 +1,40 @@
-import { FaGithub } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import { FaLinkedin } from "react-icons/fa";
 import styled from "styled-components";
-import logo from "../../assets/logo.svg"
 import { Link } from "react-router-dom";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
+import logo from "../../assets/logo.svg"
 
 const HeaderEstilizado = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1em 2em;
+  position: relative;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 `;
 
-const ListaEstilizada = styled.ul`
+const BotaoMenu = styled.button`
+  display: none;
+  background: none;
+  border: none;
+  color: var(--light-content);
+  font-size: 2rem;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 1.2em;
+    right: 2em;
+  }
+`;
+
+const ListaEstilizada = styled.ul<{ aberto?: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,39 +60,55 @@ const ListaEstilizada = styled.ul`
       color: transparent;
       -webkit-text-fill-color: transparent;
     }
-      svg {
+
+    svg {
       width: 1.5em;
       height: 1.5em;
       fill: var(--light-content);
       transition: 0.3s ease-in-out;
     }
+  }
 
-    }
-
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--background-color);
+    padding: 1em 0;
+    display: ${({ aberto }) => (aberto ? "flex" : "none")};
+  }
 `;
 
 export default function Header() {
+  const [menuAberto, setMenuAberto] = useState(false);
+
   return (
     <HeaderEstilizado>
-      <img src={logo}/>
-      <ListaEstilizada>
+      <img src={logo} alt="Logo" />
+
+      <BotaoMenu onClick={() => setMenuAberto(!menuAberto)}>
+        {menuAberto ? <FiX /> : <FiMenu />}
+      </BotaoMenu>
+
+      <ListaEstilizada aberto={menuAberto}>
         <li>
-          <Link to="/">Início</Link>
+          <Link to="/" onClick={() => setMenuAberto(false)}>Início</Link>
         </li>
         <li>
-          <Link to="/sobre">Sobre Mim</Link>
+          <Link to="/sobre" onClick={() => setMenuAberto(false)}>Sobre Mim</Link>
         </li>
         <li>
-          <Link to="/techs">Techs</Link>
+          <Link to="/techs" onClick={() => setMenuAberto(false)}>Techs</Link>
         </li>
         <li>
-          <Link to="/projetos">Projetos</Link>
+          <Link to="/projetos" onClick={() => setMenuAberto(false)}>Projetos</Link>
         </li>
         <li>
-          <Link to="/contato">Contato</Link>
+          <Link to="/contato" onClick={() => setMenuAberto(false)}>Contato</Link>
         </li>
       </ListaEstilizada>
-      <ListaEstilizada>
+
+      <ListaEstilizada aberto={menuAberto}>
         <li>
           <a href="https://github.com/tarciana23" target="_blank">
             <FaGithub />
