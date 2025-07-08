@@ -101,6 +101,14 @@ export default function Projetos() {
           ]}
           link="https://github.com/tarciana23/organo.git"
         />
+        <Projeto
+          nome="TodoList"
+          descricao="API para gerenciar tarefas."
+          techs={[
+            "Spring Boot","Spring MVC","Spring Data JPA","SpringDoc OpenAPI 3","MySQL"
+          ]}
+          link="https://github.com/tarciana23/todo-list.git"
+        />
       </div>
     </SecaoTechs>
   );
