@@ -63,7 +63,7 @@ export default function Projeto({
 }: ProjetoDados) {
   return (
     <SectionProjeto>
-      <h4>{nome} <a href={link}>
+      <h4>{nome} <a href={link} target="_blank">
         <FaGithub />
       </a></h4>
       <p>{descricao}</p>
