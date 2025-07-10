@@ -36,8 +36,20 @@ export default function Projetos() {
     <SecaoTechs>
       <div className="grid-techs">
         <Projeto
+          nome="Sistema bibliotecário"
+          descricao="O sistema permite, inicialmente, realizar operações de CRUD com livros, e será expandido para incluir autores, usuários e controle de empréstimos."
+          techs={[
+            "Java 17 + ",
+            "Spring Boot",
+            "Spring Data JPA",
+            "Lombok",
+            "PostgreSQL"
+          ]}
+          link="https://github.com/tarciana23/sistema-bibliotecario"
+        />
+        <Projeto
           nome="Área Administartiva"
-          descricao="Dashboard: Página principal com tabela, gráficos e informações."
+          descricao="Interface administrativa premium com visualização de dados através de gráficos e tabelas para análise estratégica."
           techs={[
             "React",
             "Typescript",
@@ -49,7 +61,7 @@ export default function Projetos() {
         />
         <Projeto
           nome="VollMed"
-          descricao="Api para gerenciamento de um hospital."
+          descricao="Plataforma hospitalar completa de profissionais, pacientes e consultas."
           techs={[
             "Java",
             "Spring Boot",
@@ -62,7 +74,7 @@ export default function Projetos() {
         />
         <Projeto
           nome="RocketNotes"
-          descricao="Sistema para gerenciamento de notas"
+          descricao="Aplicação completa para criação, organização e gerenciamento de notas pessoais, com sistema de tags e busca avançada."
           techs={[
             "React",
             "Node",
@@ -74,7 +86,7 @@ export default function Projetos() {
         />
         <Projeto
           nome="MoviesLib"
-          descricao="Site para busca de filmes"
+          descricao="Plataforma para busca e descoberta de filmes, integrada com API externa para mostrar informações detalhadas sobre títulos, elenco e avaliações."
           techs={[
             "React"
           ]}
@@ -82,7 +94,7 @@ export default function Projetos() {
         />
         <Projeto
           nome="UserMax"
-          descricao="Crud completo para gerenciamento de usuários"
+          descricao="Sistema completo de gerenciamento de usuários com operações CRUD, validações de dados e testes unitários abrangentes."
           techs={[
             "Java",
             "Spring Boot",
@@ -99,11 +111,11 @@ export default function Projetos() {
           techs={[
             "React"
           ]}
-          link="https://github.com/tarciana23/organo.git"
+          link="Aplicação para organização de equipes, permitindo cadastrar e categorizar colaboradores por time e área de atuação."
         />
         <Projeto
           nome="TodoList"
-          descricao="API para gerenciar tarefas."
+          descricao="API robusta para gerenciamento de tarefas pessoais ou em equipe, com autenticação, categorização e status de conclusão."
           techs={[
             "Spring Boot","Spring MVC","Spring Data JPA","SpringDoc OpenAPI 3","MySQL"
           ]}
