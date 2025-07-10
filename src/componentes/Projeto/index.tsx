@@ -11,7 +11,16 @@ const SectionProjeto = styled.div`
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   margin: 1rem 0;
+  overflow: auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &::-webkit-scrollbar {
+    width: 1px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--dark-mode);
+    border-radius: 10px;
+  }
 
   &:hover {
     transform: translateY(-5px);
