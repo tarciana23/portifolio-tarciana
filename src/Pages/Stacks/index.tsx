@@ -44,10 +44,10 @@ const SecaoTechs = styled.section`
   }
 `;
 
-export default function Techs() {
+export default function Stacks() {
   return (
     <SecaoTechs>
-      <TituloSecao titulo="Minhas Techs" />
+      <TituloSecao titulo="Minhas Stacks" />
       <div className="grid-techs">
         <svg viewBox="0 0 128 128">
           <path

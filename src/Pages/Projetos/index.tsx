@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Projeto from "../../componentes/Projeto";
+import TituloSecao from "../../componentes/TituloSecao";
 
 const SecaoTechs = styled.section`
   max-width: 900px;
@@ -34,10 +35,11 @@ const SecaoTechs = styled.section`
 export default function Projetos() {
   return (
     <SecaoTechs>
+      <TituloSecao titulo="Meus Projetos" />
       <div className="grid-techs">
         <Projeto
           nome="Sistema bibliotecário"
-          descricao="O sistema permite, inicialmente, realizar operações de CRUD com livros, e será expandido para incluir autores, usuários e controle de empréstimos."
+          descricao="CRUD completo de livros, autores, usuários e empréstimos. Desenvolvido com Spring Boot e PostgreSQL."
           techs={[
             "Java 17 + ",
             "Spring Boot",
@@ -45,7 +47,7 @@ export default function Projetos() {
             "Lombok",
             "PostgreSQL"
           ]}
-          link="https://github.com/tarciana23/sistema-bibliotecario"
+          link="https://github.com/tarciana23/sistema-bibliotec-rio"
         />
         <Projeto
           nome="Área Administartiva"
@@ -94,7 +96,7 @@ export default function Projetos() {
         />
         <Projeto
           nome="UserMax"
-          descricao="Sistema completo de gerenciamento de usuários com operações CRUD, validações de dados e testes unitários abrangentes."
+          descricao="Sistema de gerenciamento de usuários com operações CRUD, validações de dados e testes unitários abrangentes."
           techs={[
             "Java",
             "Spring Boot",
@@ -106,20 +108,20 @@ export default function Projetos() {
           link="https://github.com/tarciana23/cadastro-usuario"
         />
         <Projeto
-          nome="Organo"
-          descricao="Gerenciador de funcionários"
-          techs={[
-            "React"
-          ]}
-          link="Aplicação para organização de equipes, permitindo cadastrar e categorizar colaboradores por time e área de atuação."
-        />
-        <Projeto
           nome="TodoList"
           descricao="API robusta para gerenciamento de tarefas pessoais ou em equipe, com autenticação, categorização e status de conclusão."
           techs={[
             "Spring Boot","Spring MVC","Spring Data JPA","SpringDoc OpenAPI 3","MySQL"
           ]}
           link="https://github.com/tarciana23/todo-list.git"
+        />
+        <Projeto
+          nome="Organo"
+          descricao="Aplicação para organização de equipes, permitindo cadastrar e categorizar colaboradores por time e área de atuação."
+          techs={[
+            "React"
+          ]}
+          link="https://github.com/tarciana23/organo"
         />
       </div>
     </SecaoTechs>

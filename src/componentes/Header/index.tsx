@@ -1,20 +1,20 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import logo from "../../assets/logo.svg"
+import logo from "../../assets/logo.svg";
 
 const HeaderEstilizado = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 2em;
+  padding: 2em 4em;
   position: relative;
 
   @media (max-width: 768px) {
     flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2em 2em;
   }
 `;
 
@@ -39,9 +39,10 @@ const ListaEstilizada = styled.ul<{ aberto?: boolean }>`
   align-items: center;
   justify-content: center;
   gap: 1em;
-
+  
   li {
     list-style-type: none;
+    font-size: 1.2rem;
   }
 
   a {
@@ -84,7 +85,10 @@ export default function Header() {
 
   return (
     <HeaderEstilizado>
-      <img src={logo} alt="Logo" />
+      <Link to="/">
+        {" "}
+        <img src={logo} alt="Logo" />
+      </Link>
 
       <BotaoMenu onClick={() => setMenuAberto(!menuAberto)}>
         {menuAberto ? <FiX /> : <FiMenu />}
@@ -92,37 +96,29 @@ export default function Header() {
 
       <ListaEstilizada aberto={menuAberto}>
         <li>
-          <Link to="/" onClick={() => setMenuAberto(false)}>Início</Link>
+          <Link to="/" onClick={() => setMenuAberto(false)}>
+            Início
+          </Link>
         </li>
         <li>
-          <Link to="/sobre" onClick={() => setMenuAberto(false)}>Sobre Mim</Link>
+          <Link to="/sobre" onClick={() => setMenuAberto(false)}>
+            Sobre Mim
+          </Link>
         </li>
         <li>
-          <Link to="/techs" onClick={() => setMenuAberto(false)}>Techs</Link>
+          <Link to="/stacks" onClick={() => setMenuAberto(false)}>
+            Stacks
+          </Link>
         </li>
         <li>
-          <Link to="/projetos" onClick={() => setMenuAberto(false)}>Projetos</Link>
+          <Link to="/projetos" onClick={() => setMenuAberto(false)}>
+            Projetos
+          </Link>
         </li>
         <li>
-          <Link to="/contato" onClick={() => setMenuAberto(false)}>Contato</Link>
-        </li>
-      </ListaEstilizada>
-
-      <ListaEstilizada aberto={menuAberto}>
-        <li>
-          <a href="https://github.com/tarciana23" target="_blank">
-            <FaGithub />
-          </a>
-        </li>
-        <li>
-          <a href="mailto:tarcianasoliveira23@gmail.com" target="_blank">
-            <MdEmail />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/tarciana-souza-oliveira-72127021a/" target="_blank">
-            <FaLinkedin />
-          </a>
+          <Link to="/contato" onClick={() => setMenuAberto(false)}>
+            Contato
+          </Link>
         </li>
       </ListaEstilizada>
     </HeaderEstilizado>

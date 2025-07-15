@@ -1,3 +1,4 @@
+import { FadeInSection } from "../../FadeInSection";
 import styled from "styled-components";
 
 const SecaoSobre = styled.section`
@@ -11,7 +12,7 @@ const Bloco = styled.div`
   margin-bottom: 1.5em;
 
   h2, h3 {
-    color: var(--solid-heading);
+    color: var(--linear-color-third);
     margin-bottom: 0.5em;
   }
 
@@ -41,7 +42,8 @@ const Item = styled.div`
 export default function SobreMim() {
   return (
     <SecaoSobre>
-      <Bloco>
+      <FadeInSection>
+        <Bloco>
         <h2>Sobre mim</h2>
         <p>
           Sou graduada em Ciência da Computação e atuo como desenvolvedora
@@ -51,8 +53,10 @@ export default function SobreMim() {
           escaláveis e de alta qualidade.
         </p>
       </Bloco>
+      </FadeInSection>
 
-      <Bloco>
+      <FadeInSection>
+        <Bloco>
         <h3>Experiências</h3>
         <Item>
           <p>Secretaria de Saúde VCA</p>
@@ -71,14 +75,17 @@ export default function SobreMim() {
           <p>Desenvolvedora Backend</p>
         </Item>
       </Bloco>
+      </FadeInSection>
 
-      <Bloco>
+      <FadeInSection>
+        <Bloco>
         <h3>Educação</h3>
         <Item>
           <p>Ciência da Computação</p>
           <p>Universidade Estadual da Bahia</p>
         </Item>
       </Bloco>
+      </FadeInSection>
     </SecaoSobre>
   );
 }
