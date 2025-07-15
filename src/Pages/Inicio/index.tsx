@@ -27,7 +27,7 @@ const ApresentacaoEstilizada = styled.div`
     @media (max-width: 768px) {
       font-size: 1.8em;
       max-width: 90vw;
-      margin: 0 auto;
+      margin: 2rem 0 0 0;
       text-align: center;
     }
   }
