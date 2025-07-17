@@ -39,27 +39,41 @@ const ListaEstilizada = styled.ul<{ aberto?: boolean }>`
   align-items: center;
   justify-content: center;
   gap: 1em;
-  
+
   li {
+    position: relative;
     list-style-type: none;
     font-size: 1.2rem;
   }
 
   a {
-    text-decoration: none;
     color: var(--light-content);
-    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    transition: color 0.3s ease;
 
     &:hover {
-      background-image: linear-gradient(
-        90deg,
-        var(--linear-color-primary),
-        var(--linear-color-secondary)
-      );
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      -webkit-text-fill-color: transparent;
+      color: var(--linear-color-primary);
+    }
+
+    &::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: -1.8em;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--font-color-primary);
+      color: white;
+      padding: 0.3em 0.6em;
+      border-radius: 0.3em;
+      font-size: 0.8rem;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover::after {
+      opacity: 1;
     }
 
     svg {
@@ -77,8 +91,20 @@ const ListaEstilizada = styled.ul<{ aberto?: boolean }>`
     background-color: var(--background-color);
     padding: 1em 0;
     display: ${({ aberto }) => (aberto ? "flex" : "none")};
+
+    &::after {
+      display: none;
+    }
   }
 `;
+
+const descricoesLinks = {
+  "/": "Página inicial com overview dos meus projetos",
+  "/sobre": "Conheça mais sobre mim e minha trajetória",
+  "/stacks": "Tecnologias e ferramentas que domino",
+  "/projetos": "Projetos que desenvolvi recentemente",
+  "/contato": "Entre em contato comigo",
+};
 
 export default function Header() {
   const [menuAberto, setMenuAberto] = useState(false);

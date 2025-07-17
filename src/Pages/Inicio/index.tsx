@@ -1,4 +1,5 @@
-import foto from "../../assets/minha_foto.jpg";
+import { Link } from "react-router-dom";
+import foto from "../../assets/minha_foto.png";
 import styled, { keyframes } from "styled-components";
 
 const SecaoEstilizada = styled.section`
@@ -15,19 +16,27 @@ const SecaoEstilizada = styled.section`
   }
 `;
 
+const Destaque = styled.span`
+  background: linear-gradient(90deg, #00c0fd, #f80ab4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+`;
+
 const ApresentacaoEstilizada = styled.div`
   p {
     font-weight: 700;
     font-size: 3em;
     line-height: 1.2;
     color: var(--font-color-primary);
-    word-break: break-word;
-    overflow-wrap: anywhere;
+    overflow-wrap: normal;
+    word-break: normal;
+    white-space: normal;
 
     @media (max-width: 768px) {
       font-size: 1.8em;
       max-width: 90vw;
-      margin: 2rem 0 0 0;
+      margin: 2em 2em;
       text-align: center;
     }
   }
@@ -42,13 +51,25 @@ const FotoEstilizada = styled.div`
   padding: 10px;
   border-radius: 50%;
   display: inline-block;
+  animation: pulseGlow 4s ease-in-out infinite;
 
   img {
     width: 21em;
     height: 21em;
     border-radius: 50%;
     display: block;
-    background: white;
+  }
+
+  @keyframes pulseGlow {
+    0% {
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+    }
   }
 
   @media (max-width: 768px) {
@@ -56,14 +77,15 @@ const FotoEstilizada = styled.div`
   }
 `;
 
-const ContainerLinks = styled.div`
+
+export const ContainerLinks = styled.div`
   display: inline-flex;
   gap: 0.5em;
   flex-wrap: wrap;
   margin-top: 48px;
 
   @media (max-width: 768px) {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
   }
@@ -105,33 +127,28 @@ export const LinkEstilizado = styled.a<LinkProps>`
   }
 `;
 
+const LinkSemEstilo = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
+
 export default function Inicio() {
   return (
     <>
+     <LinkSemEstilo to="/Contato">
       <SecaoEstilizada>
         <ApresentacaoEstilizada>
           <p>
             Olá!
             <br /> Sou a Tarciana,
-            <br /> Desenvolvedora FullStack (Java e React).
+            <br /> Desenvolvedora FullStack <Destaque>(Java e React)</Destaque>
           </p>
-
-          <ContainerLinks>
-            <LinkEstilizado href="/stacks" delay="0.3s">
-              Stacks
-            </LinkEstilizado>
-            <LinkEstilizado href="/projetos" delay="0.6s">
-              Projetos
-            </LinkEstilizado>
-            <LinkEstilizado href="/contato" delay="0.9s">
-              Fale comigo
-            </LinkEstilizado>
-          </ContainerLinks>
         </ApresentacaoEstilizada>
         <FotoEstilizada>
           <img src={foto} />
         </FotoEstilizada>
       </SecaoEstilizada>
+      </LinkSemEstilo>
     </>
   );
 }

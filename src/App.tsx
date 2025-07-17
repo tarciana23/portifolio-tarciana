@@ -1,23 +1,29 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 import Footer from "./componentes/Footer";
 import Header from "./componentes/Header";
 import "./index.css";
 import Inicio from "./Pages/Inicio";
-import SobreMim from './Pages/SobreMim';
-import Projetos from './Pages/Projetos';
-import { Contato } from './Pages/Contato';
-import Stacks from './Pages/Stacks';
-
+import SobreMim from "./Pages/SobreMim";
+import Projetos from "./Pages/Projetos";
+import { Contato } from "./Pages/Contato";
+import Stacks from "./Pages/Stacks";
 
 const Pagina = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  transition: box-shadow 0.5s ease;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 8px 2px var(--linear-color-third),
+      0 0 15px 5px var(--linear-color-secondary);
+  }
 `;
 
 const Conteudo = styled.main`
-  flex: 1; 
+  flex: 1;
 `;
 
 function App() {
