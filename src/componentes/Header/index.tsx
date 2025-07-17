@@ -98,14 +98,6 @@ const ListaEstilizada = styled.ul<{ aberto?: boolean }>`
   }
 `;
 
-const descricoesLinks = {
-  "/": "Página inicial com overview dos meus projetos",
-  "/sobre": "Conheça mais sobre mim e minha trajetória",
-  "/stacks": "Tecnologias e ferramentas que domino",
-  "/projetos": "Projetos que desenvolvi recentemente",
-  "/contato": "Entre em contato comigo",
-};
-
 export default function Header() {
   const [menuAberto, setMenuAberto] = useState(false);
 
