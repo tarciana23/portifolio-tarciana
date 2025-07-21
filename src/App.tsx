@@ -14,7 +14,6 @@ const Pagina = styled.div`
   flex-direction: column;
   min-height: 100vh;
   transition: box-shadow 0.5s ease;
-  cursor: pointer;
 
   &:hover {
     box-shadow: 0 0 8px 2px var(--linear-color-third),

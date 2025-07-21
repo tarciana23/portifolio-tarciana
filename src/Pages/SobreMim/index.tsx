@@ -11,7 +11,8 @@ const SecaoSobre = styled.section`
 const Bloco = styled.div`
   margin-bottom: 1.5em;
 
-  h2, h3 {
+  h2,
+  h3 {
     color: var(--linear-color-third);
     margin-bottom: 0.5em;
   }
@@ -38,53 +39,56 @@ const Item = styled.div`
   }
 `;
 
-
 export default function SobreMim() {
   return (
     <SecaoSobre>
       <FadeInSection>
         <Bloco>
-        <h2>Sobre mim</h2>
-        <p>
-          Sou graduada em Ciência da Computação e atuo como desenvolvedora
-          fullstack, com foco em React no front-end e Java no back-end. Tenho
-          facilidade em aprender novas tecnologias, sou proativa na resolução de
-          problemas e comprometida com a entrega de soluções eficientes,
-          escaláveis e de alta qualidade.
-        </p>
-      </Bloco>
+          <h2>Sobre mim</h2>
+          <p>
+            Sou graduada em Ciência da Computação e atuo como desenvolvedora
+            fullstack, com foco em React no front-end e Java no back-end. Tenho
+            facilidade em aprender novas tecnologias, sou proativa na resolução
+            de problemas e comprometida com a entrega de soluções eficientes,
+            escaláveis e de alta qualidade.
+          </p>
+        </Bloco>
       </FadeInSection>
 
       <FadeInSection>
         <Bloco>
-        <h3>Experiências</h3>
-        <Item>
-          <p>Secretaria de Saúde VCA</p>
-          <p>Desenvolvedora Web</p>
-        </Item>
-        <Item>
-          <p>Freelancer</p>
-          <p>Desenvolvedora Front-End</p>
-        </Item>
-        <Item>
-          <p>DBC Company</p>
-          <p>Estagiária Fullstack</p>
-        </Item>
-        <Item>
-          <p>Sicredi</p>
-          <p>Desenvolvedora Backend</p>
-        </Item>
-      </Bloco>
+          <h3>Experiências</h3>
+          <Item>
+            <p>DBC Company (Alocada no Sicredi)</p>
+            <p>Desenvolvedora Backend</p>
+          </Item>
+          <Item>
+            <p>DBC Company</p>
+            <p>Estagiária Fullstack</p>
+          </Item>
+          <Item>
+            <p>Freelancer</p>
+            <p>Desenvolvedora Front-End</p>
+          </Item>
+          <Item>
+            <p>Secretaria de Saúde VCA</p>
+            <p>Desenvolvedora Web</p>
+          </Item>
+        </Bloco>
       </FadeInSection>
 
       <FadeInSection>
         <Bloco>
-        <h3>Educação</h3>
-        <Item>
-          <p>Ciência da Computação</p>
-          <p>Universidade Estadual da Bahia</p>
-        </Item>
-      </Bloco>
+          <h3>Educação</h3>
+          <Item>
+            <p>Pós graduação em Desenvolvimento Web</p>
+            <p>Instituto Federal da Bahia</p>
+          </Item>
+          <Item>
+            <p>Ciência da Computação</p>
+            <p>Universidade Estadual da Bahia</p>
+          </Item>
+        </Bloco>
       </FadeInSection>
     </SecaoSobre>
   );

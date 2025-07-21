@@ -77,7 +77,6 @@ const FotoEstilizada = styled.div`
   }
 `;
 
-
 export const ContainerLinks = styled.div`
   display: inline-flex;
   gap: 0.5em;
@@ -135,19 +134,22 @@ const LinkSemEstilo = styled(Link)`
 export default function Inicio() {
   return (
     <>
-     <LinkSemEstilo to="/Contato">
-      <SecaoEstilizada>
-        <ApresentacaoEstilizada>
-          <p>
-            Olá!
-            <br /> Sou a Tarciana,
-            <br /> Desenvolvedora FullStack <Destaque>(Java e React)</Destaque>
-          </p>
-        </ApresentacaoEstilizada>
-        <FotoEstilizada>
-          <img src={foto} />
-        </FotoEstilizada>
-      </SecaoEstilizada>
+      <LinkSemEstilo to="/Contato">
+        <SecaoEstilizada>
+          <ApresentacaoEstilizada>
+            <p>
+              Olá!
+              <br /> Sou a Tarciana,
+              <br /> Desenvolvedora FullStack{" "}
+              <Destaque>(Java e React)</Destaque>
+            </p>
+          </ApresentacaoEstilizada>
+          <FotoEstilizada>
+            <LinkSemEstilo to="/Contato">
+              <img src={foto} />
+            </LinkSemEstilo>
+          </FotoEstilizada>
+        </SecaoEstilizada>
       </LinkSemEstilo>
     </>
   );
