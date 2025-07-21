@@ -18,7 +18,7 @@ const SecaoTechs = styled.section`
   }
 
   @media (max-width: 768px) {
-    max-width: 100%; 
+    max-width: 100%;
     padding: 2em 1em;
     .grid-techs {
       grid-template-columns: repeat(2, 1fr);
@@ -45,7 +45,7 @@ export default function Projetos() {
             "Spring Boot",
             "Spring Data JPA",
             "Lombok",
-            "PostgreSQL"
+            "PostgreSQL",
           ]}
           link="https://github.com/tarciana23/sistema-bibliotec-rio"
         />
@@ -70,57 +70,57 @@ export default function Projetos() {
             "MySQL",
             "Flyway",
             "Spring Data",
-            "Spring Security"
+            "Spring Security",
           ]}
           link="https://github.com/tarciana23/vollMed.git"
         />
         <Projeto
+          nome="MusicChallenge"
+          descricao="Aplicação que consome a API do Spotify e exibe informações sobre artistas e gêneros musicais."
+          techs={[
+            "JavaScript",
+            "Vite",
+            "Spotify API",
+            "HTML",
+            "CSS",
+            "Node.js",
+          ]}
+          link="https://github.com/tarciana23/MusicChallenge"
+        />
+        <Projeto
           nome="RocketNotes"
           descricao="Aplicação completa para criação, organização e gerenciamento de notas pessoais, com sistema de tags e busca avançada."
-          techs={[
-            "React",
-            "Node",
-            "Styled-Components",
-            "Node",
-            "Express"
-          ]}
+          techs={["React", "Node", "Styled-Components", "Node", "Express"]}
           link="https://github.com/tarciana23/RocketNotes.git"
         />
         <Projeto
           nome="MoviesLib"
           descricao="Plataforma para busca e descoberta de filmes, integrada com API externa para mostrar informações detalhadas sobre títulos, elenco e avaliações."
-          techs={[
-            "React"
-          ]}
+          techs={["React"]}
           link="https://github.com/tarciana23/MoviesLib.git"
         />
         <Projeto
           nome="UserMax"
           descricao="Sistema de gerenciamento de usuários com operações CRUD, validações de dados e testes unitários abrangentes."
-          techs={[
-            "Java",
-            "Spring Boot",
-            "H2",
-            "Lombok",
-            "JUnit",
-            "Mockito"
-          ]}
+          techs={["Java", "Spring Boot", "H2", "Lombok", "JUnit", "Mockito"]}
           link="https://github.com/tarciana23/cadastro-usuario"
         />
         <Projeto
           nome="TodoList"
           descricao="API robusta para gerenciamento de tarefas pessoais ou em equipe, com autenticação, categorização e status de conclusão."
           techs={[
-            "Spring Boot","Spring MVC","Spring Data JPA","SpringDoc OpenAPI 3","MySQL"
+            "Spring Boot",
+            "Spring MVC",
+            "Spring Data JPA",
+            "SpringDoc OpenAPI 3",
+            "MySQL",
           ]}
           link="https://github.com/tarciana23/todo-list.git"
         />
         <Projeto
           nome="Organo"
           descricao="Aplicação para organização de equipes, permitindo cadastrar e categorizar colaboradores por time e área de atuação."
-          techs={[
-            "React"
-          ]}
+          techs={["React"]}
           link="https://github.com/tarciana23/organo"
         />
       </div>
