@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo.png";
 
 const HeaderEstilizado = styled.header`
   display: flex;
@@ -10,6 +10,11 @@ const HeaderEstilizado = styled.header`
   align-items: center;
   padding: 2em 4em;
   position: relative;
+
+  img{
+    width: 50%;
+    height: 50%;
+  }
 
   @media (max-width: 768px) {
     flex-wrap: wrap;
