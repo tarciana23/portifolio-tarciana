@@ -50,7 +50,7 @@ export default function Projetos() {
           link="https://github.com/tarciana23/sistema-bibliotec-rio"
         />
         <Projeto
-          nome="Área Administartiva"
+          nome="Área Administrativa"
           descricao="Interface administrativa premium com visualização de dados através de gráficos e tabelas para análise estratégica."
           techs={[
             "React",
